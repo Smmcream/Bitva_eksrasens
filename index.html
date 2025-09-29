@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Битва Экстрасенсов - ВЫ ШО БЭС?</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="main-page">
+    <div class="main-background"></div>
+    <div class="container main-container">
+        <div class="logo">
+            <h1>БИТВА ЭКСТРАСЕНСОВ</h1>
+            <div class="subtitle">ВЫ ШО БЭС?</div>
+        </div>
+        
+        <div class="main-content">
+            <p class="welcome-text">Проверьте свои экстрасенсорные способности</p>
+            <button class="start-btn" onclick="startGame()">
+                НАЧАТЬ ИСПЫТАНИЕ
+            </button>
+        </div>
+        
+        <div class="footer-note">
+            Откройте в себе дар ясновидения
+        </div>
+    </div>
+
+    <script>
+        function startGame() {
+            window.location.href = 'game.html';
+        }
+        
+        // Создаем частицы для фона
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+        });
+        
+        function createParticles() {
+            const particlesContainer = document.createElement('div');
+            particlesContainer.className = 'particles';
+            document.body.appendChild(particlesContainer);
+            
+            for (let i = 0; i < 25; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+    </script>
+</body>
+</html>

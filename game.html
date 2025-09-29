@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Испытание - Битва Экстрасенсов</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="game-page">
+    <div class="game-container">
+        <!-- Заголовок и таймер -->
+        <div class="round-header">
+            <div class="round-info">
+                <h2 id="round-title">ЧЁРНЫЙ ЯЩИК</h2>
+                <div class="round-counter">
+                    Этап <span id="current-round">1</span> из <span id="total-rounds">4</span>
+                </div>
+            </div>
+            <div class="timer-container">
+                <div class="timer" id="timer">15</div>
+                <div class="timer-label">секунд</div>
+            </div>
+        </div>
+        
+        <!-- Контент вопроса -->
+        <div class="question-content">
+            <div class="question-image">
+                <img id="question-img" src="" alt="Вопрос">
+            </div>
+            
+            <div class="question-text" id="question-text">
+                Какую энергию несёт этот предмет?
+            </div>
+        </div>
+        
+        <!-- Варианты ответов -->
+        <div class="options-container">
+            <div class="options" id="options-container">
+                <!-- JavaScript заполнит варианты -->
+            </div>
+        </div>
+        
+        <!-- Кнопка продолжения (изначально скрыта) -->
+        <div class="continue-section hidden" id="continue-section">
+            <div class="story-container">
+                <div class="story" id="story-text"></div>
+            </div>
+            <button class="continue-btn" id="continue-btn">
+                ПРОДОЛЖИТЬ
+            </button>
+        </div>
+    </div>
+    
+    <script src="js/game-data.js"></script>
+    <script src="js/game-engine.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты - Битва Экстрасенсов</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="result-page">
+    <div class="result-container fade-in">
+        <div class="result-image-container">
+            <img id="result-image" class="result-image" src="" alt="Результат">
+        </div>
+        
+        <h2 id="result-title" class="result-title"></h2>
+        
+        <p id="result-description" class="result-description"></p>
+        
+        <div id="result-score" class="result-score"></div>
+        
+        <button class="play-again-btn" onclick="playAgain()">
+            ИГРАТЬ ЕЩЁ РАЗ
+        </button>
+    </div>
+
+    <script>
+        function playAgain() {
+            window.location.href = 'index.html';
+        }
+        
+        // Загрузка результатов при открытии страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            const result = JSON.parse(localStorage.getItem('gameResult'));
+            if (result) {
+                document.getElementById('result-image').src = result.image;
+                document.getElementById('result-image').alt = result.title;
+                document.getElementById('result-title').textContent = result.title;
+                document.getElementById('result-description').textContent = result.description;
+                document.getElementById('result-score').textContent = 
+                    `Правильных ответов: ${result.score} из ${result.total}`;
+            } else {
+                // Если результатов нет, показываем заглушку
+                document.getElementById('result-title').textContent = 'Результаты не найдены';
+                document.getElementById('result-description').textContent = 
+                    'Попробуйте пройти игру заново';
+            }
+        });
+    </script>
+</body>
+</html>
