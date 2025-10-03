@@ -68,7 +68,7 @@ function createOptions(options) {
     });
 }
 
-// Выбор ответа - ТЕПЕРЬ БЕЗ ЗАДЕРЖКИ!
+// Выбор ответа 
 function selectAnswer(selectedIndex) {
     // Останавливаем таймер
     stopTimer();
@@ -76,10 +76,10 @@ function selectAnswer(selectedIndex) {
     // Проверяем ответ
     const result = gameEngine.checkAnswer(selectedIndex);
     
-    // МГНОВЕННО подсвечиваем правильный/неправильный ответ
+    // подсвечиваем правильный/неправильный ответ
     highlightAnswers(selectedIndex, currentQuestion.correct);
     
-    // МГНОВЕННО показываем историю и кнопку продолжения
+    // показываем историю и кнопку продолжения
     showContinueSection(result.story, result.gameFinished);
 }
 
@@ -97,7 +97,7 @@ function highlightAnswers(selectedIndex, correctIndex) {
     });
 }
 
-// Показ секции продолжения - ТЕПЕРЬ БЕЗ ЗАДЕРЖКИ!
+// Показ секции продолжения
 function showContinueSection(story, gameFinished) {
     const storyText = document.getElementById('story-text');
     storyText.textContent = story;
@@ -112,7 +112,7 @@ function showContinueSection(story, gameFinished) {
         }
     };
     
-    // МГНОВЕННО показываем секцию продолжения
+    // показываем секцию продолжения
     document.getElementById('continue-section').classList.remove('hidden');
     
     // Плавная прокрутка к результату
@@ -166,7 +166,7 @@ function updateProgress() {
     }
 }
 
-// Завершение игры
+// Завершение игры ура!
 function endGame() {
     const result = gameEngine.getFinalResult();
     localStorage.setItem('gameResult', JSON.stringify(result));

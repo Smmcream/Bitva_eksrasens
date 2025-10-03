@@ -50,7 +50,7 @@ body {
     z-index: -2;
 }
 
-/* fallback для фона на всякий случай */
+/* fallback для фона на всякий пожарный мало ли */
 .main-page::before {
     content: '';
     position: fixed;
@@ -283,7 +283,7 @@ body {
     color: #f08080;
 }
 
-/* СЕКЦИЯ ПРОДОЛЖЕНИЯ */
+/* ПРОДОЛЖЕНИЕ */
 .continue-section {
     margin-top: 20px;
 }
@@ -330,7 +330,7 @@ body {
     box-shadow: 0 6px 20px rgba(106, 13, 173, 0.6);
 }
 
-/* СТРАНИЦА РЕЗУЛЬТАТОВ */
+/* РЕЗУЛЬТАТЫ ЭТОГО НЕВЕРОЯТНОГО ТЕСТА */
 .result-page {
     display: flex;
     align-items: center;
@@ -426,7 +426,7 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ */
+/* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ А ТО ВСЕ ЕДЕТ */
 @media (max-width: 768px) {
     .main-container {
         padding: 25px 15px;
@@ -519,7 +519,7 @@ body {
     }
 }
 
-/* ЭФФЕКТ ПАДАЮЩИХ ЧАСТИЦ */
+/* СУПЕР-ПУПЕР ЭФФЕКТ ПАДАЮЩИХ ЧАСТИЦ */
 .particles {
     position: fixed;
     top: 0;
